@@ -62,7 +62,6 @@ def main():
 
         t = threading.Thread(target=brute_force, args=(known_hash, salt, 0, 5000))
         a = threading.Thread(target=brute_force, args=(known_hash, salt, 5001, 9999))
-        (t.daemon, a.daemon) = (True, True)
         t.start()
         a.start()
 
